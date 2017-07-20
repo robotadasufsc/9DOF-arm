@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.01" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="no" active="no"/>
@@ -420,7 +420,7 @@ www.betemcu.cu</description>
 </class>
 </classes>
 <parts>
-<part name="VIN" library="con-molex" deviceset="22-23-2021" device="" value=""/>
+<part name="J1" library="con-molex" deviceset="22-23-2021" device="" value=""/>
 <part name="SERVO1" library="con-molex" deviceset="22-23-2041" device=""/>
 <part name="SERVO2" library="con-molex" deviceset="22-23-2041" device=""/>
 <part name="SERVO3" library="con-molex" deviceset="22-23-2041" device=""/>
@@ -433,301 +433,494 @@ www.betemcu.cu</description>
 <part name="U$1" library="Arduino-clone" deviceset="PRO-MINI" device=""/>
 <part name="U$2" library="Arduino-clone" deviceset="PRO-MINI" device=""/>
 <part name="I2C" library="con-molex" deviceset="22-23-2021" device="" value=""/>
+<part name="VINARDUINO" library="con-molex" deviceset="22-23-2021" device="" value=""/>
 </parts>
 <sheets>
 <sheet>
 <plain>
+<wire x1="-32.766" y1="29.718" x2="-32.766" y2="100.838" width="0.1524" layer="103"/>
+<wire x1="-32.766" y1="100.838" x2="140.462" y2="100.838" width="0.1524" layer="103"/>
+<wire x1="140.462" y1="100.838" x2="140.462" y2="29.718" width="0.1524" layer="103"/>
+<wire x1="140.462" y1="29.718" x2="-32.766" y2="29.718" width="0.1524" layer="103"/>
 </plain>
 <instances>
-<instance part="VIN" gate="-1" x="-12.7" y="60.96" rot="MR0"/>
-<instance part="VIN" gate="-2" x="-12.7" y="58.42" rot="MR0"/>
-<instance part="SERVO1" gate="-1" x="-2.54" y="76.2" rot="R90"/>
-<instance part="SERVO1" gate="-2" x="0" y="76.2" rot="R90"/>
-<instance part="SERVO1" gate="-3" x="2.54" y="76.2" rot="R90"/>
-<instance part="SERVO1" gate="-4" x="5.08" y="76.2" rot="R90"/>
-<instance part="SERVO2" gate="-1" x="17.78" y="76.2" rot="R90"/>
-<instance part="SERVO2" gate="-2" x="20.32" y="76.2" rot="R90"/>
-<instance part="SERVO2" gate="-3" x="22.86" y="76.2" rot="R90"/>
-<instance part="SERVO2" gate="-4" x="25.4" y="76.2" rot="R90"/>
-<instance part="SERVO3" gate="-1" x="35.56" y="76.2" rot="R90"/>
-<instance part="SERVO3" gate="-2" x="38.1" y="76.2" rot="R90"/>
-<instance part="SERVO3" gate="-3" x="40.64" y="76.2" rot="R90"/>
-<instance part="SERVO3" gate="-4" x="43.18" y="76.2" rot="R90"/>
-<instance part="SERVO4" gate="-1" x="55.88" y="76.2" rot="R90"/>
-<instance part="SERVO4" gate="-2" x="58.42" y="76.2" rot="R90"/>
-<instance part="SERVO4" gate="-3" x="60.96" y="76.2" rot="R90"/>
-<instance part="SERVO4" gate="-4" x="63.5" y="76.2" rot="R90"/>
-<instance part="SERVO5" gate="-1" x="73.66" y="76.2" rot="R90"/>
-<instance part="SERVO5" gate="-2" x="76.2" y="76.2" rot="R90"/>
-<instance part="SERVO5" gate="-3" x="78.74" y="76.2" rot="R90"/>
-<instance part="SERVO5" gate="-4" x="81.28" y="76.2" rot="R90"/>
-<instance part="SERVO6" gate="-1" x="93.98" y="76.2" rot="R90"/>
-<instance part="SERVO6" gate="-2" x="96.52" y="76.2" rot="R90"/>
-<instance part="SERVO6" gate="-3" x="99.06" y="76.2" rot="R90"/>
-<instance part="SERVO6" gate="-4" x="101.6" y="76.2" rot="R90"/>
-<instance part="SERVO7" gate="-1" x="111.76" y="76.2" rot="R90"/>
-<instance part="SERVO7" gate="-2" x="114.3" y="76.2" rot="R90"/>
-<instance part="SERVO7" gate="-3" x="116.84" y="76.2" rot="R90"/>
-<instance part="SERVO7" gate="-4" x="119.38" y="76.2" rot="R90"/>
-<instance part="SERVO8" gate="-1" x="129.54" y="76.2" rot="R90"/>
-<instance part="SERVO8" gate="-2" x="132.08" y="76.2" rot="R90"/>
-<instance part="SERVO8" gate="-3" x="134.62" y="76.2" rot="R90"/>
-<instance part="SERVO8" gate="-4" x="137.16" y="76.2" rot="R90"/>
-<instance part="SERVO9" gate="-1" x="144.78" y="76.2" rot="R90"/>
-<instance part="SERVO9" gate="-2" x="147.32" y="76.2" rot="R90"/>
-<instance part="SERVO9" gate="-3" x="149.86" y="76.2" rot="R90"/>
-<instance part="SERVO9" gate="-4" x="152.4" y="76.2" rot="R90"/>
-<instance part="U$1" gate="G$1" x="40.64" y="-15.24"/>
-<instance part="U$2" gate="G$1" x="139.7" y="-15.24"/>
+<instance part="J1" gate="-1" x="-12.954" y="54.864" rot="MR0"/>
+<instance part="J1" gate="-2" x="-12.954" y="52.324" rot="MR0"/>
+<instance part="SERVO1" gate="-1" x="-6.858" y="91.948"/>
+<instance part="SERVO1" gate="-2" x="-6.858" y="89.408"/>
+<instance part="SERVO1" gate="-3" x="-6.858" y="86.868"/>
+<instance part="SERVO1" gate="-4" x="-6.858" y="84.328"/>
+<instance part="SERVO2" gate="-1" x="-7.366" y="78.486"/>
+<instance part="SERVO2" gate="-2" x="-7.366" y="75.946"/>
+<instance part="SERVO2" gate="-3" x="-7.366" y="73.406"/>
+<instance part="SERVO2" gate="-4" x="-7.366" y="70.866"/>
+<instance part="SERVO3" gate="-1" x="25.146" y="90.932"/>
+<instance part="SERVO3" gate="-2" x="25.146" y="88.392"/>
+<instance part="SERVO3" gate="-3" x="25.146" y="85.852"/>
+<instance part="SERVO3" gate="-4" x="25.146" y="83.312"/>
+<instance part="SERVO4" gate="-1" x="24.892" y="78.74"/>
+<instance part="SERVO4" gate="-2" x="24.892" y="76.2"/>
+<instance part="SERVO4" gate="-3" x="24.892" y="73.66"/>
+<instance part="SERVO4" gate="-4" x="24.892" y="71.12"/>
+<instance part="SERVO5" gate="-1" x="57.912" y="91.186"/>
+<instance part="SERVO5" gate="-2" x="57.912" y="88.646"/>
+<instance part="SERVO5" gate="-3" x="57.912" y="86.106"/>
+<instance part="SERVO5" gate="-4" x="57.912" y="83.566"/>
+<instance part="SERVO6" gate="-1" x="57.912" y="78.486"/>
+<instance part="SERVO6" gate="-2" x="57.912" y="75.946"/>
+<instance part="SERVO6" gate="-3" x="57.912" y="73.406"/>
+<instance part="SERVO6" gate="-4" x="57.912" y="70.866"/>
+<instance part="SERVO7" gate="-1" x="89.154" y="90.17"/>
+<instance part="SERVO7" gate="-2" x="89.154" y="87.63"/>
+<instance part="SERVO7" gate="-3" x="89.154" y="85.09"/>
+<instance part="SERVO7" gate="-4" x="89.154" y="82.55"/>
+<instance part="SERVO8" gate="-1" x="89.408" y="78.232"/>
+<instance part="SERVO8" gate="-2" x="89.408" y="75.692"/>
+<instance part="SERVO8" gate="-3" x="89.408" y="73.152"/>
+<instance part="SERVO8" gate="-4" x="89.408" y="70.612"/>
+<instance part="SERVO9" gate="-1" x="119.126" y="89.408"/>
+<instance part="SERVO9" gate="-2" x="119.126" y="86.868"/>
+<instance part="SERVO9" gate="-3" x="119.126" y="84.328"/>
+<instance part="SERVO9" gate="-4" x="119.126" y="81.788"/>
+<instance part="U$1" gate="G$1" x="4.318" y="-20.066"/>
+<instance part="U$2" gate="G$1" x="103.378" y="-20.066"/>
 <instance part="I2C" gate="-1" x="-12.7" y="48.26" rot="MR0"/>
 <instance part="I2C" gate="-2" x="-12.7" y="45.72" rot="MR0"/>
+<instance part="VINARDUINO" gate="-1" x="-12.7" y="40.64" rot="MR0"/>
+<instance part="VINARDUINO" gate="-2" x="-12.7" y="38.1" rot="MR0"/>
 </instances>
 <busses>
 </busses>
 <nets>
-<net name="N$1" class="0">
+<net name="SERVO1_POT" class="0">
 <segment>
 <pinref part="SERVO1" gate="-4" pin="S"/>
-<wire x1="5.08" y1="73.66" x2="5.08" y2="45.72" width="0.1524" layer="91"/>
-<wire x1="5.08" y1="45.72" x2="68.58" y2="45.72" width="0.1524" layer="91"/>
-<wire x1="68.58" y1="45.72" x2="68.58" y2="-12.7" width="0.1524" layer="91"/>
+<wire x1="-9.398" y1="84.328" x2="-20.574" y2="84.328" width="0.1524" layer="91"/>
+<label x="-19.558" y="84.836" size="1.27" layer="95"/>
+</segment>
+<segment>
 <pinref part="U$1" gate="G$1" pin="A0"/>
-<wire x1="68.58" y1="-12.7" x2="58.42" y2="-12.7" width="0.1524" layer="91"/>
+<wire x1="29.972" y1="-17.526" x2="22.098" y2="-17.526" width="0.1524" layer="91"/>
+<label x="29.718" y="-15.494" size="1.27" layer="95" rot="R180"/>
+</segment>
+</net>
+<net name="SERVO2_POT" class="0">
+<segment>
+<pinref part="SERVO2" gate="-4" pin="S"/>
+<wire x1="-9.906" y1="70.866" x2="-20.574" y2="70.866" width="0.1524" layer="91"/>
+<label x="-20.066" y="71.374" size="1.27" layer="95"/>
+</segment>
+<segment>
+<pinref part="U$1" gate="G$1" pin="A1"/>
+<wire x1="29.972" y1="-14.986" x2="22.098" y2="-14.986" width="0.1524" layer="91"/>
+<label x="29.718" y="-13.208" size="1.27" layer="95" rot="R180"/>
+</segment>
+</net>
+<net name="SERVO3_POT" class="0">
+<segment>
+<pinref part="SERVO3" gate="-4" pin="S"/>
+<wire x1="22.606" y1="83.312" x2="11.176" y2="83.312" width="0.1524" layer="91"/>
+<label x="12.192" y="83.82" size="1.27" layer="95"/>
+</segment>
+<segment>
+<pinref part="U$1" gate="G$1" pin="A2"/>
+<wire x1="29.972" y1="-12.446" x2="22.098" y2="-12.446" width="0.1524" layer="91"/>
+<label x="29.718" y="-10.668" size="1.27" layer="95" rot="R180"/>
+</segment>
+</net>
+<net name="SERVO4_POT" class="0">
+<segment>
+<pinref part="SERVO4" gate="-4" pin="S"/>
+<wire x1="22.352" y1="71.12" x2="10.668" y2="71.12" width="0.1524" layer="91"/>
+<label x="12.192" y="71.628" size="1.27" layer="95"/>
+</segment>
+<segment>
+<pinref part="U$1" gate="G$1" pin="A3"/>
+<wire x1="29.972" y1="-9.906" x2="22.098" y2="-9.906" width="0.1524" layer="91"/>
+<label x="29.718" y="-8.128" size="1.27" layer="95" rot="R180"/>
+</segment>
+</net>
+<net name="SERVO9_POT" class="0">
+<segment>
+<pinref part="SERVO9" gate="-4" pin="S"/>
+<wire x1="116.586" y1="81.788" x2="105.156" y2="81.788" width="0.1524" layer="91"/>
+<label x="106.68" y="82.296" size="1.27" layer="95"/>
+</segment>
+<segment>
+<pinref part="U$2" gate="G$1" pin="A2"/>
+<wire x1="128.778" y1="-12.446" x2="121.158" y2="-12.446" width="0.1524" layer="91"/>
+<label x="117.348" y="-12.192" size="1.27" layer="95"/>
+</segment>
+</net>
+<net name="SERVO6_POT" class="0">
+<segment>
+<pinref part="U$1" gate="G$1" pin="A7"/>
+<label x="6.35" y="-44.704" size="1.27" layer="95" rot="R90"/>
+<wire x1="6.858" y1="-45.466" x2="6.858" y2="-37.846" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="SERVO6" gate="-4" pin="S"/>
+<wire x1="55.372" y1="70.866" x2="43.688" y2="70.866" width="0.1524" layer="91"/>
+<label x="45.466" y="71.12" size="1.27" layer="95"/>
+</segment>
+</net>
+<net name="SERVO7_POT" class="0">
+<segment>
+<pinref part="SERVO7" gate="-4" pin="S"/>
+<wire x1="86.614" y1="82.55" x2="74.93" y2="82.55" width="0.1524" layer="91"/>
+<label x="76.708" y="83.058" size="1.27" layer="95"/>
+</segment>
+<segment>
+<pinref part="U$2" gate="G$1" pin="A0"/>
+<wire x1="129.286" y1="-17.526" x2="121.158" y2="-17.526" width="0.1524" layer="91"/>
+<label x="117.348" y="-17.018" size="1.27" layer="95"/>
+</segment>
+</net>
+<net name="SERVO3_SIG" class="0">
+<segment>
+<pinref part="U$1" gate="G$1" pin="D4"/>
+<wire x1="-25.4" y1="-14.986" x2="-18.542" y2="-14.986" width="0.1524" layer="91"/>
+<label x="-25.146" y="-14.478" size="1.27" layer="95"/>
+</segment>
+<segment>
+<pinref part="SERVO3" gate="-3" pin="S"/>
+<wire x1="22.606" y1="85.852" x2="11.176" y2="85.852" width="0.1524" layer="91"/>
+<label x="12.446" y="86.36" size="1.27" layer="95"/>
+</segment>
+</net>
+<net name="SERVO4_SIG" class="0">
+<segment>
+<pinref part="U$1" gate="G$1" pin="D5"/>
+<wire x1="-25.4" y1="-17.526" x2="-18.542" y2="-17.526" width="0.1524" layer="91"/>
+<label x="-13.97" y="-16.002" size="1.27" layer="95" rot="R180"/>
+</segment>
+<segment>
+<pinref part="SERVO4" gate="-3" pin="S"/>
+<wire x1="22.352" y1="73.66" x2="10.668" y2="73.66" width="0.1524" layer="91"/>
+<label x="12.446" y="73.914" size="1.27" layer="95"/>
+</segment>
+</net>
+<net name="SERVO5_SIG" class="0">
+<segment>
+<pinref part="SERVO5" gate="-3" pin="S"/>
+<wire x1="55.372" y1="86.106" x2="43.688" y2="86.106" width="0.1524" layer="91"/>
+<label x="45.466" y="86.36" size="1.27" layer="95"/>
+</segment>
+<segment>
+<pinref part="U$1" gate="G$1" pin="D6"/>
+<wire x1="-25.4" y1="-20.066" x2="-18.542" y2="-20.066" width="0.1524" layer="91"/>
+<label x="-13.97" y="-18.542" size="1.27" layer="95" rot="R180"/>
+</segment>
+</net>
+<net name="SERVO6_SIG" class="0">
+<segment>
+<pinref part="SERVO6" gate="-3" pin="S"/>
+<wire x1="55.372" y1="73.406" x2="43.688" y2="73.406" width="0.1524" layer="91"/>
+<label x="45.466" y="73.66" size="1.27" layer="95"/>
+</segment>
+<segment>
+<pinref part="U$1" gate="G$1" pin="D7"/>
+<wire x1="-25.4" y1="-22.606" x2="-18.542" y2="-22.606" width="0.1524" layer="91"/>
+<label x="-25.146" y="-22.352" size="1.27" layer="95"/>
+</segment>
+</net>
+<net name="SERVO8_POT" class="0">
+<segment>
+<pinref part="SERVO8" gate="-4" pin="S"/>
+<wire x1="86.868" y1="70.612" x2="75.184" y2="70.612" width="0.1524" layer="91"/>
+<label x="76.962" y="71.12" size="1.27" layer="95"/>
+</segment>
+<segment>
+<pinref part="U$2" gate="G$1" pin="A1"/>
+<wire x1="129.032" y1="-14.986" x2="121.158" y2="-14.986" width="0.1524" layer="91"/>
+<label x="117.348" y="-14.478" size="1.27" layer="95"/>
+</segment>
+</net>
+<net name="SERVO7_SIG" class="0">
+<segment>
+<pinref part="SERVO7" gate="-3" pin="S"/>
+<wire x1="86.614" y1="85.09" x2="74.93" y2="85.09" width="0.1524" layer="91"/>
+<label x="76.708" y="85.598" size="1.27" layer="95"/>
+</segment>
+<segment>
+<pinref part="U$2" gate="G$1" pin="D2"/>
+<wire x1="73.152" y1="-9.906" x2="80.518" y2="-9.906" width="0.1524" layer="91"/>
+<label x="84.582" y="-8.382" size="1.27" layer="95" rot="R180"/>
+</segment>
+</net>
+<net name="SERVO5_POT" class="0">
+<segment>
+<pinref part="U$1" gate="G$1" pin="A6"/>
+<wire x1="4.318" y1="-37.846" x2="4.318" y2="-45.72" width="0.1524" layer="91"/>
+<label x="3.556" y="-44.704" size="1.27" layer="95" rot="R90"/>
+</segment>
+<segment>
+<pinref part="SERVO5" gate="-4" pin="S"/>
+<wire x1="55.372" y1="83.566" x2="43.688" y2="83.566" width="0.1524" layer="91"/>
+<label x="45.466" y="84.074" size="1.27" layer="95"/>
+</segment>
+</net>
+<net name="SERVO8_SIG" class="0">
+<segment>
+<pinref part="SERVO8" gate="-3" pin="S"/>
+<wire x1="86.868" y1="73.152" x2="75.184" y2="73.152" width="0.1524" layer="91"/>
+<label x="76.962" y="73.66" size="1.27" layer="95"/>
+</segment>
+<segment>
+<pinref part="U$2" gate="G$1" pin="D3"/>
+<wire x1="73.152" y1="-12.446" x2="80.518" y2="-12.446" width="0.1524" layer="91"/>
+<label x="84.582" y="-10.668" size="1.27" layer="95" rot="R180"/>
+</segment>
+</net>
+<net name="SERVO9_SIG" class="0">
+<segment>
+<pinref part="SERVO9" gate="-3" pin="S"/>
+<wire x1="116.586" y1="84.328" x2="105.156" y2="84.328" width="0.1524" layer="91"/>
+<label x="106.68" y="84.836" size="1.27" layer="95"/>
+</segment>
+<segment>
+<pinref part="U$2" gate="G$1" pin="D4"/>
+<wire x1="73.406" y1="-14.986" x2="80.518" y2="-14.986" width="0.1524" layer="91"/>
+<label x="84.582" y="-13.208" size="1.27" layer="95" rot="R180"/>
+</segment>
+</net>
+<net name="GND" class="0">
+<segment>
+<pinref part="J1" gate="-2" pin="S"/>
+<wire x1="-10.414" y1="52.324" x2="-3.556" y2="52.324" width="0.1524" layer="91"/>
+<label x="-11.684" y="52.578" size="1.27" layer="95"/>
+</segment>
+<segment>
+<pinref part="VINARDUINO" gate="-2" pin="S"/>
+<wire x1="-10.16" y1="38.1" x2="0.762" y2="38.1" width="0.1524" layer="91"/>
+<label x="-8.636" y="39.624" size="1.27" layer="95" rot="R180"/>
+</segment>
+<segment>
+<label x="106.68" y="89.916" size="1.27" layer="95"/>
+<pinref part="SERVO9" gate="-1" pin="S"/>
+<wire x1="116.586" y1="89.408" x2="105.41" y2="89.408" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="SERVO8" gate="-1" pin="S"/>
+<wire x1="86.868" y1="78.232" x2="75.438" y2="78.232" width="0.1524" layer="91"/>
+<label x="76.962" y="78.994" size="1.27" layer="95"/>
+</segment>
+<segment>
+<label x="76.962" y="90.932" size="1.27" layer="95"/>
+<pinref part="SERVO7" gate="-1" pin="S"/>
+<wire x1="86.614" y1="90.17" x2="75.184" y2="90.17" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="SERVO6" gate="-1" pin="S"/>
+<wire x1="55.372" y1="78.486" x2="43.942" y2="78.486" width="0.1524" layer="91"/>
+<label x="45.466" y="79.248" size="1.27" layer="95"/>
+</segment>
+<segment>
+<wire x1="55.626" y1="91.186" x2="55.626" y2="90.932" width="0.1524" layer="91"/>
+<wire x1="55.626" y1="90.932" x2="43.688" y2="90.932" width="0.1524" layer="91"/>
+<label x="44.958" y="91.44" size="1.27" layer="95"/>
+</segment>
+<segment>
+<pinref part="SERVO4" gate="-1" pin="S"/>
+<wire x1="22.352" y1="78.74" x2="10.922" y2="78.74" width="0.1524" layer="91"/>
+<label x="11.684" y="79.248" size="1.27" layer="95"/>
+</segment>
+<segment>
+<label x="12.446" y="91.44" size="1.27" layer="95"/>
+<pinref part="SERVO3" gate="-1" pin="S"/>
+<wire x1="22.606" y1="90.932" x2="11.176" y2="90.932" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="SERVO2" gate="-1" pin="S"/>
+<wire x1="-9.906" y1="78.486" x2="-20.574" y2="78.486" width="0.1524" layer="91"/>
+<label x="-20.32" y="79.248" size="1.27" layer="95"/>
+</segment>
+<segment>
+<pinref part="SERVO1" gate="-1" pin="S"/>
+<wire x1="-9.398" y1="91.948" x2="-20.574" y2="91.948" width="0.1524" layer="91"/>
+<label x="-20.066" y="92.456" size="1.27" layer="95"/>
+</segment>
+<segment>
+<pinref part="U$1" gate="G$1" pin="GND4"/>
+<wire x1="-3.302" y1="15.494" x2="-3.302" y2="22.606" width="0.1524" layer="91"/>
+<label x="-3.81" y="11.176" size="1.27" layer="95" rot="R90"/>
+</segment>
+<segment>
+<pinref part="U$1" gate="G$1" pin="GND3"/>
+<wire x1="-0.762" y1="15.494" x2="-0.762" y2="22.606" width="0.1524" layer="91"/>
+<label x="-1.27" y="11.176" size="1.27" layer="95" rot="R90"/>
+</segment>
+<segment>
+<pinref part="U$1" gate="G$1" pin="GND"/>
+<wire x1="22.098" y1="-2.286" x2="27.178" y2="-2.286" width="0.1524" layer="91"/>
+<label x="17.526" y="-1.778" size="1.27" layer="95"/>
+</segment>
+<segment>
+<pinref part="U$2" gate="G$1" pin="GND4"/>
+<wire x1="95.758" y1="15.494" x2="95.758" y2="22.606" width="0.1524" layer="91"/>
+<label x="95.25" y="10.922" size="1.27" layer="95" rot="R90"/>
+</segment>
+<segment>
+<pinref part="U$2" gate="G$1" pin="GND3"/>
+<wire x1="98.298" y1="15.494" x2="98.298" y2="22.606" width="0.1524" layer="91"/>
+<label x="97.79" y="10.922" size="1.27" layer="95" rot="R90"/>
+</segment>
+<segment>
+<wire x1="120.65" y1="-2.286" x2="121.158" y2="-2.286" width="0.1524" layer="91"/>
+<wire x1="121.158" y1="-2.286" x2="129.54" y2="-2.286" width="0.1524" layer="91"/>
+<wire x1="129.54" y1="-2.286" x2="129.794" y2="-2.032" width="0.1524" layer="91"/>
+<label x="116.84" y="-1.778" size="1.27" layer="95"/>
+<pinref part="U$2" gate="G$1" pin="GND"/>
+<junction x="121.158" y="-2.286"/>
+</segment>
+</net>
+<net name="VCC_SERVO" class="0">
+<segment>
+<pinref part="J1" gate="-1" pin="S"/>
+<wire x1="-10.414" y1="54.864" x2="-3.556" y2="54.864" width="0.1524" layer="91"/>
+<label x="-11.684" y="55.372" size="1.27" layer="95"/>
+</segment>
+<segment>
+<wire x1="-9.144" y1="89.408" x2="-9.398" y2="89.408" width="0.1524" layer="91"/>
+<label x="-19.812" y="89.916" size="1.27" layer="95"/>
+<pinref part="SERVO1" gate="-2" pin="S"/>
+<wire x1="-9.398" y1="89.408" x2="-20.574" y2="89.408" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="SERVO2" gate="-2" pin="S"/>
+<wire x1="-9.906" y1="75.946" x2="-20.574" y2="75.946" width="0.1524" layer="91"/>
+<label x="-20.066" y="76.454" size="1.27" layer="95"/>
+</segment>
+<segment>
+<pinref part="SERVO3" gate="-2" pin="S"/>
+<wire x1="22.606" y1="88.392" x2="11.176" y2="88.392" width="0.1524" layer="91"/>
+<label x="12.7" y="88.9" size="1.27" layer="95"/>
+</segment>
+<segment>
+<pinref part="SERVO4" gate="-2" pin="S"/>
+<wire x1="22.352" y1="76.2" x2="10.922" y2="76.2" width="0.1524" layer="91"/>
+<label x="11.684" y="76.708" size="1.27" layer="95"/>
+</segment>
+<segment>
+<pinref part="SERVO6" gate="-2" pin="S"/>
+<wire x1="55.372" y1="75.946" x2="44.196" y2="75.946" width="0.1524" layer="91"/>
+<label x="45.72" y="76.454" size="1.27" layer="95"/>
+</segment>
+<segment>
+<pinref part="SERVO7" gate="-2" pin="S"/>
+<wire x1="86.614" y1="87.63" x2="75.438" y2="87.63" width="0.1524" layer="91"/>
+<label x="76.962" y="88.138" size="1.27" layer="95"/>
+</segment>
+<segment>
+<pinref part="SERVO8" gate="-2" pin="S"/>
+<wire x1="86.868" y1="75.692" x2="75.438" y2="75.692" width="0.1524" layer="91"/>
+<label x="76.962" y="76.2" size="1.27" layer="95"/>
+</segment>
+<segment>
+<pinref part="SERVO9" gate="-2" pin="S"/>
+<wire x1="116.586" y1="86.868" x2="105.156" y2="86.868" width="0.1524" layer="91"/>
+<label x="106.68" y="87.376" size="1.27" layer="95"/>
+</segment>
+<segment>
+<pinref part="SERVO5" gate="-2" pin="S"/>
+<wire x1="55.372" y1="88.646" x2="43.688" y2="88.646" width="0.1524" layer="91"/>
+<label x="45.212" y="89.154" size="1.27" layer="95"/>
+</segment>
+</net>
+<net name="SERVO1_SIG" class="0">
+<segment>
+<pinref part="U$1" gate="G$1" pin="D2"/>
+<wire x1="-25.654" y1="-9.906" x2="-18.542" y2="-9.906" width="0.1524" layer="91"/>
+<label x="-19.558" y="87.376" size="1.27" layer="95"/>
+<label x="-25.146" y="-9.398" size="1.27" layer="95"/>
+</segment>
+<segment>
+<wire x1="-9.144" y1="86.868" x2="-9.398" y2="86.868" width="0.1524" layer="91"/>
+<label x="-19.558" y="87.376" size="1.27" layer="95"/>
+<pinref part="SERVO1" gate="-3" pin="S"/>
+<wire x1="-9.398" y1="86.868" x2="-20.574" y2="86.868" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="I2C_SCL" class="0">
+<segment>
+<pinref part="U$1" gate="G$1" pin="A5"/>
+<wire x1="1.778" y1="-40.386" x2="1.778" y2="-37.846" width="0.1524" layer="91"/>
+<label x="0.2794" y="-33.3502" size="1.27" layer="95" rot="R270"/>
+</segment>
+<segment>
+<pinref part="I2C" gate="-2" pin="S"/>
+<wire x1="-10.16" y1="45.72" x2="-4.826" y2="45.72" width="0.1524" layer="91"/>
+<wire x1="-4.826" y1="45.72" x2="-4.826" y2="45.974" width="0.1524" layer="91"/>
+<label x="-12.192" y="45.974" size="1.27" layer="95"/>
+</segment>
+</net>
+<net name="VCC_ARDUINO" class="0">
+<segment>
+<pinref part="VINARDUINO" gate="-1" pin="S"/>
+<wire x1="-10.16" y1="40.64" x2="0.762" y2="40.64" width="0.1524" layer="91"/>
+<label x="0.508" y="42.418" size="1.27" layer="95" rot="R180"/>
+</segment>
+<segment>
+<pinref part="U$1" gate="G$1" pin="VCC2"/>
+<wire x1="1.778" y1="15.494" x2="1.778" y2="22.606" width="0.1524" layer="91"/>
+<label x="1.27" y="11.43" size="1.27" layer="95" rot="R90"/>
+</segment>
+<segment>
+<wire x1="100.838" y1="15.24" x2="100.838" y2="15.494" width="0.1524" layer="91"/>
+<label x="100.33" y="10.922" size="1.27" layer="95" rot="R90"/>
+<pinref part="U$2" gate="G$1" pin="VCC2"/>
+<wire x1="100.838" y1="15.494" x2="100.838" y2="22.606" width="0.1524" layer="91"/>
+<junction x="100.838" y="15.494"/>
+</segment>
+</net>
+<net name="I2C_SDA" class="0">
+<segment>
+<pinref part="I2C" gate="-1" pin="S"/>
+<wire x1="-10.16" y1="48.26" x2="-4.8514" y2="48.26" width="0.1524" layer="91"/>
+<label x="-11.9634" y="48.768" size="1.27" layer="95"/>
+</segment>
+<segment>
+<pinref part="U$1" gate="G$1" pin="A4"/>
+<wire x1="-0.762" y1="-37.846" x2="-0.762" y2="-40.386" width="0.1524" layer="91"/>
+<label x="-2.7178" y="-33.0454" size="1.27" layer="95" rot="R270"/>
+</segment>
+</net>
+<net name="SERVO2_SIG" class="0">
+<segment>
+<label x="-19.812" y="73.914" size="1.27" layer="95"/>
+<pinref part="SERVO2" gate="-3" pin="S"/>
+<wire x1="-9.906" y1="73.406" x2="-20.574" y2="73.406" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<wire x1="-18.288" y1="-12.446" x2="-18.542" y2="-12.446" width="0.1524" layer="91"/>
+<label x="-25.146" y="-11.938" size="1.27" layer="95"/>
+<pinref part="U$1" gate="G$1" pin="D3"/>
+<wire x1="-18.542" y1="-12.446" x2="-25.4" y2="-12.446" width="0.1524" layer="91"/>
+<junction x="-18.542" y="-12.446"/>
 </segment>
 </net>
 <net name="N$2" class="0">
 <segment>
-<pinref part="SERVO2" gate="-4" pin="S"/>
-<wire x1="25.4" y1="73.66" x2="25.4" y2="48.26" width="0.1524" layer="91"/>
-<wire x1="25.4" y1="48.26" x2="71.12" y2="48.26" width="0.1524" layer="91"/>
-<wire x1="71.12" y1="48.26" x2="71.12" y2="-10.16" width="0.1524" layer="91"/>
-<pinref part="U$1" gate="G$1" pin="A1"/>
-<wire x1="71.12" y1="-10.16" x2="58.42" y2="-10.16" width="0.1524" layer="91"/>
+<wire x1="164.338" y1="96.52" x2="164.592" y2="96.774" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$3" class="0">
 <segment>
-<pinref part="SERVO3" gate="-4" pin="S"/>
-<wire x1="43.18" y1="73.66" x2="43.18" y2="50.8" width="0.1524" layer="91"/>
-<wire x1="43.18" y1="50.8" x2="73.66" y2="50.8" width="0.1524" layer="91"/>
-<wire x1="73.66" y1="50.8" x2="73.66" y2="-7.62" width="0.1524" layer="91"/>
-<pinref part="U$1" gate="G$1" pin="A2"/>
-<wire x1="73.66" y1="-7.62" x2="58.42" y2="-7.62" width="0.1524" layer="91"/>
+<wire x1="-9.652" y1="73.152" x2="-9.652" y2="73.406" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$4" class="0">
 <segment>
-<pinref part="SERVO4" gate="-4" pin="S"/>
-<wire x1="63.5" y1="73.66" x2="63.5" y2="53.34" width="0.1524" layer="91"/>
-<wire x1="63.5" y1="53.34" x2="76.2" y2="53.34" width="0.1524" layer="91"/>
-<wire x1="76.2" y1="53.34" x2="76.2" y2="-5.08" width="0.1524" layer="91"/>
-<pinref part="U$1" gate="G$1" pin="A3"/>
-<wire x1="76.2" y1="-5.08" x2="58.42" y2="-5.08" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$9" class="0">
-<segment>
-<pinref part="VIN" gate="-1" pin="S"/>
-<wire x1="-10.16" y1="60.96" x2="0" y2="60.96" width="0.1524" layer="91"/>
-<pinref part="SERVO1" gate="-2" pin="S"/>
-<wire x1="0" y1="60.96" x2="20.32" y2="60.96" width="0.1524" layer="91"/>
-<wire x1="20.32" y1="60.96" x2="38.1" y2="60.96" width="0.1524" layer="91"/>
-<wire x1="38.1" y1="60.96" x2="58.42" y2="60.96" width="0.1524" layer="91"/>
-<wire x1="58.42" y1="60.96" x2="76.2" y2="60.96" width="0.1524" layer="91"/>
-<wire x1="76.2" y1="60.96" x2="96.52" y2="60.96" width="0.1524" layer="91"/>
-<wire x1="96.52" y1="60.96" x2="114.3" y2="60.96" width="0.1524" layer="91"/>
-<wire x1="114.3" y1="60.96" x2="132.08" y2="60.96" width="0.1524" layer="91"/>
-<wire x1="132.08" y1="60.96" x2="147.32" y2="60.96" width="0.1524" layer="91"/>
-<wire x1="0" y1="73.66" x2="0" y2="60.96" width="0.1524" layer="91"/>
-<pinref part="SERVO2" gate="-2" pin="S"/>
-<wire x1="20.32" y1="73.66" x2="20.32" y2="60.96" width="0.1524" layer="91"/>
-<pinref part="SERVO3" gate="-2" pin="S"/>
-<wire x1="38.1" y1="73.66" x2="38.1" y2="60.96" width="0.1524" layer="91"/>
-<pinref part="SERVO4" gate="-2" pin="S"/>
-<wire x1="58.42" y1="73.66" x2="58.42" y2="60.96" width="0.1524" layer="91"/>
-<pinref part="SERVO5" gate="-2" pin="S"/>
-<wire x1="76.2" y1="73.66" x2="76.2" y2="60.96" width="0.1524" layer="91"/>
-<pinref part="SERVO6" gate="-2" pin="S"/>
-<wire x1="96.52" y1="73.66" x2="96.52" y2="60.96" width="0.1524" layer="91"/>
-<pinref part="SERVO7" gate="-2" pin="S"/>
-<wire x1="114.3" y1="73.66" x2="114.3" y2="60.96" width="0.1524" layer="91"/>
-<pinref part="SERVO8" gate="-2" pin="S"/>
-<wire x1="132.08" y1="73.66" x2="132.08" y2="60.96" width="0.1524" layer="91"/>
-<pinref part="SERVO9" gate="-2" pin="S"/>
-<wire x1="147.32" y1="73.66" x2="147.32" y2="60.96" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$10" class="0">
-<segment>
-<pinref part="SERVO9" gate="-4" pin="S"/>
-<wire x1="152.4" y1="73.66" x2="152.4" y2="53.34" width="0.1524" layer="91"/>
-<wire x1="152.4" y1="53.34" x2="172.72" y2="53.34" width="0.1524" layer="91"/>
-<wire x1="172.72" y1="53.34" x2="172.72" y2="-7.62" width="0.1524" layer="91"/>
-<pinref part="U$2" gate="G$1" pin="A2"/>
-<wire x1="172.72" y1="-7.62" x2="157.48" y2="-7.62" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$11" class="0">
-<segment>
-<pinref part="SERVO6" gate="-4" pin="S"/>
-<wire x1="101.6" y1="73.66" x2="101.6" y2="-40.64" width="0.1524" layer="91"/>
-<pinref part="U$1" gate="G$1" pin="A7"/>
-<wire x1="43.18" y1="-33.02" x2="43.18" y2="-35.56" width="0.1524" layer="91"/>
-<wire x1="43.18" y1="-35.56" x2="43.18" y2="-38.1" width="0.1524" layer="91"/>
-<wire x1="101.6" y1="-40.64" x2="43.18" y2="-40.64" width="0.1524" layer="91"/>
-<wire x1="43.18" y1="-40.64" x2="43.18" y2="-38.1" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$13" class="0">
-<segment>
-<pinref part="SERVO7" gate="-4" pin="S"/>
-<wire x1="119.38" y1="73.66" x2="119.38" y2="40.64" width="0.1524" layer="91"/>
-<wire x1="119.38" y1="40.64" x2="106.68" y2="40.64" width="0.1524" layer="91"/>
-<wire x1="106.68" y1="40.64" x2="106.68" y2="-45.72" width="0.1524" layer="91"/>
-<wire x1="106.68" y1="-45.72" x2="170.18" y2="-45.72" width="0.1524" layer="91"/>
-<wire x1="170.18" y1="-45.72" x2="170.18" y2="-12.7" width="0.1524" layer="91"/>
-<pinref part="U$2" gate="G$1" pin="A0"/>
-<wire x1="170.18" y1="-12.7" x2="157.48" y2="-12.7" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$6" class="0">
-<segment>
-<pinref part="VIN" gate="-2" pin="S"/>
-<pinref part="SERVO1" gate="-1" pin="S"/>
-<wire x1="-10.16" y1="58.42" x2="-2.54" y2="58.42" width="0.1524" layer="91"/>
-<wire x1="-2.54" y1="73.66" x2="-2.54" y2="58.42" width="0.1524" layer="91"/>
-<pinref part="SERVO2" gate="-1" pin="S"/>
-<wire x1="-2.54" y1="58.42" x2="17.78" y2="58.42" width="0.1524" layer="91"/>
-<wire x1="17.78" y1="73.66" x2="17.78" y2="58.42" width="0.1524" layer="91"/>
-<wire x1="17.78" y1="58.42" x2="35.56" y2="58.42" width="0.1524" layer="91"/>
-<wire x1="35.56" y1="76.2" x2="35.56" y2="58.42" width="0.1524" layer="91"/>
-<pinref part="SERVO4" gate="-1" pin="S"/>
-<wire x1="35.56" y1="58.42" x2="55.88" y2="58.42" width="0.1524" layer="91"/>
-<wire x1="55.88" y1="58.42" x2="55.88" y2="73.66" width="0.1524" layer="91"/>
-<pinref part="SERVO5" gate="-1" pin="S"/>
-<wire x1="55.88" y1="58.42" x2="73.66" y2="58.42" width="0.1524" layer="91"/>
-<wire x1="73.66" y1="73.66" x2="73.66" y2="58.42" width="0.1524" layer="91"/>
-<wire x1="73.66" y1="58.42" x2="93.98" y2="58.42" width="0.1524" layer="91"/>
-<wire x1="93.98" y1="58.42" x2="93.98" y2="76.2" width="0.1524" layer="91"/>
-<pinref part="SERVO7" gate="-1" pin="S"/>
-<wire x1="93.98" y1="58.42" x2="111.76" y2="58.42" width="0.1524" layer="91"/>
-<wire x1="111.76" y1="58.42" x2="111.76" y2="73.66" width="0.1524" layer="91"/>
-<wire x1="111.76" y1="58.42" x2="129.54" y2="58.42" width="0.1524" layer="91"/>
-<wire x1="129.54" y1="58.42" x2="129.54" y2="76.2" width="0.1524" layer="91"/>
-<wire x1="129.54" y1="58.42" x2="144.78" y2="58.42" width="0.1524" layer="91"/>
-<wire x1="144.78" y1="58.42" x2="144.78" y2="76.2" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$5" class="0">
-<segment>
-<pinref part="SERVO1" gate="-3" pin="S"/>
-<wire x1="2.54" y1="73.66" x2="2.54" y2="-5.08" width="0.1524" layer="91"/>
-<pinref part="U$1" gate="G$1" pin="D2"/>
-<wire x1="2.54" y1="-5.08" x2="17.78" y2="-5.08" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$12" class="0">
-<segment>
-<pinref part="SERVO2" gate="-3" pin="S"/>
-<wire x1="22.86" y1="73.66" x2="22.86" y2="43.18" width="0.1524" layer="91"/>
-<wire x1="22.86" y1="43.18" x2="0" y2="43.18" width="0.1524" layer="91"/>
-<wire x1="0" y1="43.18" x2="0" y2="-7.62" width="0.1524" layer="91"/>
-<pinref part="U$1" gate="G$1" pin="D3"/>
-<wire x1="0" y1="-7.62" x2="17.78" y2="-7.62" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$14" class="0">
-<segment>
-<pinref part="SERVO3" gate="-3" pin="S"/>
-<wire x1="40.64" y1="73.66" x2="40.64" y2="40.64" width="0.1524" layer="91"/>
-<wire x1="40.64" y1="40.64" x2="-2.54" y2="40.64" width="0.1524" layer="91"/>
-<wire x1="-2.54" y1="40.64" x2="-2.54" y2="-10.16" width="0.1524" layer="91"/>
-<pinref part="U$1" gate="G$1" pin="D4"/>
-<wire x1="-2.54" y1="-10.16" x2="17.78" y2="-10.16" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$15" class="0">
-<segment>
-<pinref part="SERVO4" gate="-3" pin="S"/>
-<wire x1="60.96" y1="73.66" x2="60.96" y2="38.1" width="0.1524" layer="91"/>
-<wire x1="60.96" y1="38.1" x2="-5.08" y2="38.1" width="0.1524" layer="91"/>
-<wire x1="-5.08" y1="38.1" x2="-5.08" y2="-12.7" width="0.1524" layer="91"/>
-<pinref part="U$1" gate="G$1" pin="D5"/>
-<wire x1="-5.08" y1="-12.7" x2="17.78" y2="-12.7" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$16" class="0">
-<segment>
-<pinref part="SERVO5" gate="-3" pin="S"/>
-<wire x1="78.74" y1="73.66" x2="78.74" y2="35.56" width="0.1524" layer="91"/>
-<wire x1="78.74" y1="35.56" x2="-7.62" y2="35.56" width="0.1524" layer="91"/>
-<wire x1="-7.62" y1="35.56" x2="-7.62" y2="-15.24" width="0.1524" layer="91"/>
-<pinref part="U$1" gate="G$1" pin="D6"/>
-<wire x1="-7.62" y1="-15.24" x2="17.78" y2="-15.24" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$17" class="0">
-<segment>
-<pinref part="SERVO6" gate="-3" pin="S"/>
-<wire x1="99.06" y1="73.66" x2="99.06" y2="33.02" width="0.1524" layer="91"/>
-<wire x1="99.06" y1="33.02" x2="-10.16" y2="33.02" width="0.1524" layer="91"/>
-<wire x1="-10.16" y1="33.02" x2="-10.16" y2="-17.78" width="0.1524" layer="91"/>
-<pinref part="U$1" gate="G$1" pin="D7"/>
-<wire x1="-10.16" y1="-17.78" x2="17.78" y2="-17.78" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$18" class="0">
-<segment>
-<pinref part="SERVO8" gate="-4" pin="S"/>
-<wire x1="137.16" y1="73.66" x2="137.16" y2="33.02" width="0.1524" layer="91"/>
-<wire x1="137.16" y1="33.02" x2="170.18" y2="33.02" width="0.1524" layer="91"/>
-<wire x1="170.18" y1="33.02" x2="170.18" y2="-10.16" width="0.1524" layer="91"/>
-<pinref part="U$2" gate="G$1" pin="A1"/>
-<wire x1="170.18" y1="-10.16" x2="157.48" y2="-10.16" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$20" class="0">
-<segment>
-<pinref part="SERVO7" gate="-3" pin="S"/>
-<wire x1="116.84" y1="73.66" x2="116.84" y2="43.18" width="0.1524" layer="91"/>
-<wire x1="116.84" y1="43.18" x2="104.14" y2="43.18" width="0.1524" layer="91"/>
-<wire x1="104.14" y1="43.18" x2="104.14" y2="-5.08" width="0.1524" layer="91"/>
-<pinref part="U$2" gate="G$1" pin="D2"/>
-<wire x1="104.14" y1="-5.08" x2="116.84" y2="-5.08" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$8" class="0">
-<segment>
-<pinref part="U$1" gate="G$1" pin="A6"/>
-<wire x1="40.64" y1="-33.02" x2="40.64" y2="-43.18" width="0.1524" layer="91"/>
-<pinref part="SERVO5" gate="-4" pin="S"/>
-<wire x1="81.28" y1="73.66" x2="81.28" y2="-43.18" width="0.1524" layer="91"/>
-<wire x1="81.28" y1="-43.18" x2="40.64" y2="-43.18" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$7" class="0">
-<segment>
-<pinref part="SERVO8" gate="-3" pin="S"/>
-<wire x1="134.62" y1="73.66" x2="134.62" y2="38.1" width="0.1524" layer="91"/>
-<wire x1="134.62" y1="38.1" x2="109.22" y2="38.1" width="0.1524" layer="91"/>
-<wire x1="109.22" y1="38.1" x2="109.22" y2="-7.62" width="0.1524" layer="91"/>
-<pinref part="U$2" gate="G$1" pin="D3"/>
-<wire x1="109.22" y1="-7.62" x2="116.84" y2="-7.62" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$19" class="0">
-<segment>
-<pinref part="SERVO9" gate="-3" pin="S"/>
-<wire x1="149.86" y1="73.66" x2="149.86" y2="35.56" width="0.1524" layer="91"/>
-<wire x1="149.86" y1="35.56" x2="111.76" y2="35.56" width="0.1524" layer="91"/>
-<wire x1="111.76" y1="35.56" x2="111.76" y2="-10.16" width="0.1524" layer="91"/>
-<pinref part="U$2" gate="G$1" pin="D4"/>
-<wire x1="111.76" y1="-10.16" x2="116.84" y2="-10.16" width="0.1524" layer="91"/>
+<wire x1="-28.702" y1="96.266" x2="-28.956" y2="96.52" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
 </sheet>
 </sheets>
+<errors>
+<approved hash="204,1,58.42,5.08,U$1,RAW,,,,"/>
+<approved hash="204,1,157.48,5.08,U$2,RAW,,,,"/>
+</errors>
 </schematic>
 </drawing>
 </eagle>

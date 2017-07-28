@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.01" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.005" unitdist="inch" unit="inch" style="dots" multiple="1" display="yes" altdistance="0.025" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="no" active="no"/>
@@ -912,6 +912,54 @@ www.betemcu.cu</description>
 <net name="N$4" class="0">
 <segment>
 <wire x1="-28.702" y1="96.266" x2="-28.956" y2="96.52" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="SPI_SS" class="0">
+<segment>
+<pinref part="U$1" gate="G$1" pin="D10"/>
+<wire x1="22.098" y1="-27.686" x2="30.607" y2="-27.686" width="0.1524" layer="91"/>
+<label x="17.907" y="-27.305" size="1.27" layer="95"/>
+</segment>
+<segment>
+<pinref part="U$2" gate="G$1" pin="D10"/>
+<wire x1="121.158" y1="-27.686" x2="128.905" y2="-27.686" width="0.1524" layer="91"/>
+<label x="116.967" y="-27.432" size="1.27" layer="95"/>
+</segment>
+</net>
+<net name="SPI_MOSI" class="0">
+<segment>
+<pinref part="U$1" gate="G$1" pin="D11"/>
+<wire x1="22.098" y1="-25.146" x2="30.48" y2="-25.146" width="0.1524" layer="91"/>
+<label x="17.78" y="-24.765" size="1.27" layer="95"/>
+</segment>
+<segment>
+<pinref part="U$2" gate="G$1" pin="D11"/>
+<wire x1="121.158" y1="-25.146" x2="128.905" y2="-25.146" width="0.1524" layer="91"/>
+<label x="116.713" y="-24.892" size="1.27" layer="95"/>
+</segment>
+</net>
+<net name="SPI_MISO" class="0">
+<segment>
+<pinref part="U$1" gate="G$1" pin="D12"/>
+<wire x1="22.098" y1="-22.606" x2="30.099" y2="-22.606" width="0.1524" layer="91"/>
+<label x="17.653" y="-22.225" size="1.27" layer="95"/>
+</segment>
+<segment>
+<pinref part="U$2" gate="G$1" pin="D12"/>
+<wire x1="121.158" y1="-22.606" x2="128.778" y2="-22.606" width="0.1524" layer="91"/>
+<label x="116.713" y="-22.352" size="1.27" layer="95"/>
+</segment>
+</net>
+<net name="SPI_SCLK" class="0">
+<segment>
+<pinref part="U$2" gate="G$1" pin="D13"/>
+<wire x1="121.158" y1="-20.066" x2="128.651" y2="-20.066" width="0.1524" layer="91"/>
+<label x="116.586" y="-19.812" size="1.27" layer="95"/>
+</segment>
+<segment>
+<pinref part="U$1" gate="G$1" pin="D13"/>
+<wire x1="22.098" y1="-20.066" x2="30.099" y2="-20.066" width="0.1524" layer="91"/>
+<label x="17.653" y="-19.812" size="1.27" layer="95"/>
 </segment>
 </net>
 </nets>
